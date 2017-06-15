@@ -1,6 +1,33 @@
-# meldaravaniel.github.io
+# Meldaravaniel.Github.Io
 
-##Introduction
-So far this is mostly experimenting.  I have some ideas for some tiny websites I'd like to create, but have some more learning to do before they can happen.  For now, I'm running through the [Angular.js Tutorial](http://campus.codeschool.com/courses/shaping-up-with-angular-js) on [CodeSchool](https://www.codeschool.com/) and adding little things to the index page as I go.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
-I already work with a lot of ng, css, html, and js at work, but I don't feel like I have a very good background in it, so this will be my space to learn more about how these work together.  Hurrah!
+## Required software
+
+> Verify that you are running at least node 6.9.x and npm 3.x.x by running node -v and npm -v in a terminal/console window. Older versions produce errors, but newer versions are fine.
+> https://angular.io/guide/quickstart
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
