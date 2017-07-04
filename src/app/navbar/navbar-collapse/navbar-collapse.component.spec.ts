@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KnitCodeAppComponent } from './knit-code-app.component';
+import { NavbarCollapseComponent } from './navbar-collapse.component';
 
-describe('KnitCodeAppComponent', () => {
-  let component: KnitCodeAppComponent;
-  let fixture: ComponentFixture<KnitCodeAppComponent>;
+describe('NavbarCollapseComponent', () => {
+  let component: NavbarCollapseComponent;
+  let fixture: ComponentFixture<NavbarCollapseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KnitCodeAppComponent ]
+      declarations: [ NavbarCollapseComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KnitCodeAppComponent);
+    fixture = TestBed.createComponent(NavbarCollapseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

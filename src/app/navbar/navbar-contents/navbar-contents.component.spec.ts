@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KnitCodeAppComponent } from './knit-code-app.component';
+import { NavbarContentsComponent } from './navbar-contents.component';
 
-describe('KnitCodeAppComponent', () => {
-  let component: KnitCodeAppComponent;
-  let fixture: ComponentFixture<KnitCodeAppComponent>;
+describe('NavbarContentsComponent', () => {
+  let component: NavbarContentsComponent;
+  let fixture: ComponentFixture<NavbarContentsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KnitCodeAppComponent ]
+      declarations: [ NavbarContentsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KnitCodeAppComponent);
+    fixture = TestBed.createComponent(NavbarContentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

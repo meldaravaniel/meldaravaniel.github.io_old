@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-knit-code',
-  templateUrl: './knit-code.component.html',
-  styleUrls: ['./knit-code.component.css']
+  selector: 'knit-code-app',
+  templateUrl: './knit-code-app.component.html',
+  styleUrls: ['./knit-code-app.component.css']
 })
-export class KnitCodeComponent implements OnInit {
+export class KnitCodeAppComponent implements OnInit {
 
   constructor() { }
 
