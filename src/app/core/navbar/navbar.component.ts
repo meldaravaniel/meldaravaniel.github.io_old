@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  isIn: boolean = false;  // store state
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public toggleState() {  // click handler
+    this.isIn = !this.isIn;
   }
 
 }
