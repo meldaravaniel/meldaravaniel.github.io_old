@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   declarations: [NavbarComponent],
   exports: [
+    // note to self: when your main module can't see stuff, it's because you haven't exported it. >_<
     NavbarComponent
   ]
 })
