@@ -4,8 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Required software
 
-> Verify that you are running at least node 6.9.x and npm 3.x.x by running node -v and npm -v in a terminal/console window. Older versions produce errors, but newer versions are fine.
+> Verify that you are running at least node 6.9.x and npm 3.x.x by running `node -v` and `npm -v` in a terminal/console window. Older versions produce errors, but newer versions are fine.
 > https://angular.io/guide/quickstart
+
+Bootstrap v4.0.0.alpha.6, Font Awesome, Jquery (install all with `npm install [software] --save`).  For jquery, also install the TypeScript autocomplete: `npm install @types/jquery --save-dev`.
 
 ## Development server
 
