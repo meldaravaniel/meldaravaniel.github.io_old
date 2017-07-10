@@ -9,8 +9,10 @@ import { FormsModule } from '@angular/forms';
 
 export class KnitCodeComponent implements OnInit {
 
+  userWord: string = '';
+
   wordToEncode: CodeWord = {
-    word: 'knit'
+    word: ''
   };
 
   constructor() { }
@@ -18,9 +20,9 @@ export class KnitCodeComponent implements OnInit {
   ngOnInit() {
   }
 
-  //wordAdded() {
-  //  let wordToEncode = 'you clicked a button!';
-  //}
+  encodeWord(userWord: string) {
+    this.wordToEncode.word = userWord;
+  }
 
 }
 

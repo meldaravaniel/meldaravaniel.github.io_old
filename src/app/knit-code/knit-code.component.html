@@ -4,10 +4,12 @@
       <div class="input-group">
         <input
           placeholder="Enter a word..."
-          [(ngModel)]="wordToEncode.word">
+          [(ngModel)]="userWord">
         <span class="input-group-btn">
-          <button class="btn btn-secondary"
-                  type="button">Let's knit!</button>
+          <button
+            (click)="encodeWord(userWord)"
+            class="btn btn-secondary"
+            type="button">Let's knit!</button>
         </span>
       </div>
     </div>
