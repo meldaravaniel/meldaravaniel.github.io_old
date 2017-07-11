@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 export class KnitCodeComponent implements OnInit {
 
   userWord: string = '';
+  charNumbers: number[] = [];
 
   wordToEncode: CodeWord = {
     word: ''
@@ -22,6 +23,10 @@ export class KnitCodeComponent implements OnInit {
 
   encodeWord(userWord: string) {
     this.wordToEncode.word = userWord;
+    this.charNumbers = [];
+    for(var i = 0; i < userWord.length; i++) {
+      this.charNumbers.push(parseInt(userWord.charAt(i), 36) - 9);
+    }
   }
 
 }
