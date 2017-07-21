@@ -15,13 +15,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6 offset-lg-3">
-      <p>
-        {{wordToEncode.word}}
-      </p>
-        <span *ngFor="let char of charNumbers">
-          {{char}}
-        </span>
+    <div class="col-lg-6 offset-lg-3" [hidden]="!wordToEncode.word">
+      <ul>
+        <li>{{wordToEncode.word}}</li>
+        <li>
+          <span *ngFor="let char of charNumbers">{{char}} </span>
+        </li>
+        <li>
+          <span *ngFor="let num of indivCharNumbers">{{num}} </span>
+        </li>
+      </ul>
+
     </div>
   </div>
 </div>
