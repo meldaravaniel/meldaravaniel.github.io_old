@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import {forEach} from "@angular/router/src/utils/collection";
+import {Component, OnInit} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-knit-code',
@@ -10,26 +10,33 @@ import {forEach} from "@angular/router/src/utils/collection";
 
 export class KnitCodeComponent implements OnInit {
 
-  userWord: string = '';
+  userWord = '';
   charNumbers: number[] = [];
   indivCharNumbers: number[] = [];
 
   wordToEncode: CodeWord = {
-    word: ''
+    word: '',
+    encodings: [[], [], [], [], [], [], [], [], []]
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   public encodeWord(userWord: string) {
     this.wordToEncode.word = userWord;
-    this.charNumbers = [];
-    for(var i = 0; i < userWord.length; i++) {
-      this.charNumbers.push(parseInt(userWord.charAt(i), 36) - 9);
-    }
+    this.encode(userWord, 10);
+
+
     this.splitCharNumbers();
+  }
+
+  private encode(word: string, base: number) {
+    for (let i = 0; i < word.length; i++) {
+      this.wordToEncode.encodings[base - 2][i] = parseInt(word.charAt(i), base) - 9;
+    }
   }
 
   private splitCharNumbers() {
@@ -43,4 +50,5 @@ export class KnitCodeComponent implements OnInit {
 
 export class CodeWord {
   word: string;
+  encodings: number[][];
 }

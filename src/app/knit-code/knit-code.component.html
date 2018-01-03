@@ -16,15 +16,16 @@
   </div>
   <div class="row">
     <div class="col-lg-6 offset-lg-3" [hidden]="!wordToEncode.word">
-      <ul>
-        <li>{{wordToEncode.word}}</li>
-        <li>
-          <span *ngFor="let char of charNumbers">{{char}} </span>
-        </li>
-        <li>
-          <span *ngFor="let num of indivCharNumbers">{{num}} </span>
-        </li>
-      </ul>
+      <div *ngFor="let base of wordToEncode.encodings; index as i">
+        Base {{i+2}}: <span *ngFor="let arr of base">{{arr}} </span>
+      </div>
+      <!--<ul>-->
+        <!--<li>Encoded word: {{wordToEncode.word}}</li>-->
+<!---->
+        <!--<li *ngFor="let base of wordToEncode.encodings">Base: <span *ngFor="let char of base">{{char}} </span>-->
+        <!--</li>-->
+        <!--<li>Encoded word: {{wordToEncode.word}}</li>-->
+      <!--</ul>-->
 
     </div>
   </div>

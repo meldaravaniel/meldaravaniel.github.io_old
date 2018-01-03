@@ -9,6 +9,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Bootstrap v4.0.0.alpha.6, Font Awesome, Jquery (install all with `npm install [software] --save`).  For jquery, also install the TypeScript autocomplete: `npm install @types/jquery --save-dev`.
 
+## Setting up a new Dev Environment
+
+Install the angular cli: `npm install -g @angular/cli`
+Create the node modules: `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
