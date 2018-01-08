@@ -27,16 +27,43 @@ export class KnitCodeComponent implements OnInit {
 
   public encodeWord(userWord: string) {
     this.wordToEncode.word = userWord;
-    this.encode(userWord, 10);
-
+    const base10 = this.encodeBase10(userWord);
+    this.wordToEncode.encodings[8] = base10;
+    for (let i = 2; i < 10; i++) {
+      this.wordToEncode.encodings[i - 2] = this.encodeBase(i, base10);
+    }
 
     this.splitCharNumbers();
   }
 
-  private encode(word: string, base: number) {
+  private encodeBase10(word: string): number[] {
+    const result = [];
     for (let i = 0; i < word.length; i++) {
-      this.wordToEncode.encodings[base - 2][i] = parseInt(word.charAt(i), base) - 9;
+      result[i] = parseInt(word.charAt(i), 36) - 9;
     }
+    return result;
+  }
+
+  private encodeBase(base: number, base10: number[]): number[] {
+    const result = [];
+    for (let i = 0; i < base10.length; i++) {
+      let curr = base10[i];
+      let res = 0;
+      while (curr > 0) {
+        const remainder = curr % base;
+        curr = (curr - remainder) / base;
+        res = this.decimalToBase(remainder) + res;
+      }
+      result[i] = res;
+    }
+    return result;
+  }
+
+  private decimalToBase(input: number): number {
+    if (input >= 0 && input <= 9) {
+      return input;
+    }
+    return input - 10;
   }
 
   private splitCharNumbers() {
