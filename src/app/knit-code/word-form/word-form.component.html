@@ -1,0 +1,27 @@
+<form #wordForm="ngForm">
+	<div class="form-group">
+		<label for="word">Word</label>
+		<input 	[(ngModel)]="userWord"
+				placeholder="Enter a word to knit..." 
+				type="text" 
+				class="form-control" 
+				id="word" 
+				required>
+	</div>
+
+	<button type="submit" class="btn btn-success">Let's knit!</button>
+</form>
+
+<!--
+<div class="input-group">
+        <input
+          placeholder="Enter a word..."
+          [(ngModel)]="userWord">
+        <span class="input-group-btn">
+          <button
+            (click)="encodeWord(userWord)"
+            class="btn btn-secondary"
+            type="button">Let's knit!</button>
+        </span>
+      </div>
+      -->

@@ -5,11 +5,13 @@ import { AppRoutingModule, routingComponents } from './app.routing';
 
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
+import { WordFormComponent } from './knit-code/word-form/word-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    WordFormComponent
   ],
   imports: [
     BrowserModule,
