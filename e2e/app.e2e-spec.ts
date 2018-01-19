@@ -1,14 +1,14 @@
-import { Meldaravaniel.Github.IoPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('meldaravaniel.github.io App', () => {
-  let page: Meldaravaniel.Github.IoPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new Meldaravaniel.Github.IoPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

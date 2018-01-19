@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JumbotronComponent } from './jumbotron.component';
+import { WordFormComponent } from './word-form.component';
 
-describe('JumbotronComponent', () => {
-  let component: JumbotronComponent;
-  let fixture: ComponentFixture<JumbotronComponent>;
+describe('WordFormComponent', () => {
+  let component: WordFormComponent;
+  let fixture: ComponentFixture<WordFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JumbotronComponent ]
+      declarations: [ WordFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JumbotronComponent);
+    fixture = TestBed.createComponent(WordFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

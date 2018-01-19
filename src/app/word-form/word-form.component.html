@@ -1,15 +1,21 @@
-<form #wordForm="ngForm">
+<form (ngSubmit)="onSubmit()" #wordForm="ngForm">
 	<div class="form-group">
 		<label for="word">Word</label>
-		<input 	[(ngModel)]="userWord"
+		<input	[(ngModel)]="userWord"
+				#name="ngModel"
 				placeholder="Enter a word to knit..." 
+				required
 				type="text" 
 				class="form-control" 
+				name="word"
 				id="word" 
 				required>
 	</div>
 
-	<button type="submit" class="btn btn-success">Let's knit!</button>
+	<button 
+		[disabled]="!wordForm.form.valid"
+		type="submit" 
+		class="btn btn-success">Let's knit!</button>
 </form>
 
 <!--
@@ -22,6 +28,11 @@
             (click)="encodeWord(userWord)"
             class="btn btn-secondary"
             type="button">Let's knit!</button>
+
+[(ngModel)]="userWord"
+
+#wordForm="ngForm"
+
         </span>
       </div>
       -->
