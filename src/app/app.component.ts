@@ -2,12 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+	<div>
+		Parent: {{ userWord }}
+		<app-word-form (change)="wordChange($event)"></app-word-form>
+	</div>`,
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
-  userWord = '';
+  userWord = 'knitter';
   charNumbers: number[] = [];
   indivCharNumbers: number[] = [];
 
@@ -22,6 +27,10 @@ export class AppComponent {
 
   ngOnInit() {
 
+  }
+
+  wordChange(event) {
+  	this.userWord = event;
   }
 
   public encodeWord(userWord: string) {
@@ -75,7 +84,6 @@ export class AppComponent {
 }
 
 export class CodeWord {
-  word: string;
-  encodings: number[][];
-}
-}
+	  word: string;
+	  encodings: number[][];
+	}

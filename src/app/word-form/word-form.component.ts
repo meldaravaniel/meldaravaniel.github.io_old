@@ -1,21 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-word-form',
-  templateUrl: './word-form.component.html',
+  template: `
+  	<form (ngSubmit)="onSubmit()"
+  		novalidate 
+  		[formGroup]="form">
+  		<input formControlName="word">
+		<button
+			type="submit"
+			[disabled]="form.invalid">
+			Let's knit!
+		</button>
+	</form>`,
   styleUrls: ['./word-form.component.css']
 })
-export class WordFormComponent implements OnInit {
+export class WordFormComponent {
 
-	userWord = '';
+	@Output()
+	change: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+	form = this.formBuilder.group({
+		word: ['', Validators.required]
+	});
 
-  ngOnInit() {
-  }
+  constructor(private formBuilder: FormBuilder) {}
 
   onSubmit() {
-  	console.log("submitted!");
+  	let result = confirm("Are you sure you want to proceed?  This will erase all progress.");
+  	if(result) {
+  		console.log(this.form);
+  		this.change.emit(this.form.controls.word.value);
+  	}
   }
 
 }
