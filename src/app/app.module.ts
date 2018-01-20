@@ -4,7 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { WordFormComponent } from './word-form/word-form.component';
+import { WordFormComponent } from './components/word-form/word-form.component';
+import { WordEncodingComponent } from './components/word-encoding/word-encoding.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { WordFormComponent } from './word-form/word-form.component';
   ],
   declarations: [
     AppComponent,
-    WordFormComponent
+    WordFormComponent,
+    WordEncodingComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
