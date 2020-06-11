@@ -28,3 +28,5 @@ Some other person: "What the fuck, why'd flyway change all this.....?"
 I was SMART and attempted to go from flyway 3 to flyway *5* because why would you bother stopping in the middle??  (although it would have been fine if it had modified my db, because I was in there *meaning* to upgrade flyway specifically)  So I just got the "hey why is your db telling me I have to put something in a column I didn't expect to see here" exception when 5 tried inserting to the schema table. :P  But now I have to do it in TWO parts: upgrade to 4. Push that. Upgrade to 5.  Such a pain.
 
 Perhaps the title of this should be "Reading/Writing (Good/Clear/Understandable) Documentation Makes Good Neighbors"...but that's too verbose.
+
+In other news: of COURSE this doesn't work the first time I attempt it.  Ugh. Fine.  I'll go fork some Jekyll thing that works OOB instead. *grumble*
