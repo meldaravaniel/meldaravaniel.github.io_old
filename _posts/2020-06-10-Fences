@@ -1,0 +1,30 @@
+---
+layout: post
+title: Good Documentation Makes Good...Neighbors...
+---
+###### idk it sounded better in my head.
+
+Was going to add this lil rantystory to 'smells' but it...'smelled'...being there.
+
+So.
+
+This Flyway issue [thread](https://github.com/flyway/flyway/issues/1248) makes me laugh.
+
+## TLDR: 
+someone wants to see if their migrations are up to date, runs the Info command from Flyway 4 on their Flyway 3-managed db.
+For the upgrade from 3 to 4, FlywayFolks 'helpfully' made flyway update the schema table (removing a column) upon the first command run using 4...but didn't really document that...and when they say 'first command', they really meant it.  ANY first command, including those that NORMALLY do not make database changes...like...'info'...
+
+I just love how the devs are like, 
+"Works as designed. Issue closed." 
+everyone yells at them.
+Devs: "Look, we TOLD you it would happen 'on first run'!"
+everyone keeps yelling at them.
+Devs: "Okay fine.  We updated the documentation. Now it says, 'on first run of any Flyway command'.  We're not. changing the code. Leave us alone."
+...
+...
+2 years later
+Some other person: "What the fuck, why'd flyway change all this.....?" 
+
+I was SMART and attempted to go from flyway 3 to flyway *5* because why would you bother stopping in the middle??  (although it would have been fine if it had modified my db, because I was in there *meaning* to upgrade flyway specifically)  So I just got the "hey why is your db telling me I have to put something in a column I didn't expect to see here" exception when 5 tried inserting to the schema table. :P  But now I have to do it in TWO parts: upgrade to 4. Push that. Upgrade to 5.  Such a pain.
+
+Perhaps the title of this should be "Reading/Writing (Good/Clear/Understandable) Documentation Makes Good Neighbors"...but that's too verbose.
